@@ -2,7 +2,7 @@
 
 帮我们家莲莲coding的Demo
 
-![LPMultiSelectDemo展示](https://github.com/EizoiOS/LPSegmentDemo/blob/master/LPMulitSelectGIF.gif)
+![LPMultiSelectDemo展示](https://github.com/EizoiOS/LPSegmentDemo/blob/master/LPSegmentGIF.gif)
 
 ## 联系 Support
 
