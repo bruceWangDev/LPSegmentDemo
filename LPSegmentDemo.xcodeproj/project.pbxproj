@@ -15,6 +15,7 @@
 		784A7F711CD8DC7200BC011B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 784A7F6F1CD8DC7200BC011B /* LaunchScreen.storyboard */; };
 		784A7F7C1CD8DC7200BC011B /* LPSegmentDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 784A7F7B1CD8DC7200BC011B /* LPSegmentDemoTests.m */; };
 		784A7F871CD8DC7200BC011B /* LPSegmentDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 784A7F861CD8DC7200BC011B /* LPSegmentDemoUITests.m */; };
+		784A7F9A1CD8E1FF00BC011B /* LPSegmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 784A7F991CD8E1FF00BC011B /* LPSegmentView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		784A7F821CD8DC7200BC011B /* LPSegmentDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LPSegmentDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		784A7F861CD8DC7200BC011B /* LPSegmentDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LPSegmentDemoUITests.m; sourceTree = "<group>"; };
 		784A7F881CD8DC7200BC011B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		784A7F981CD8E1FF00BC011B /* LPSegmentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPSegmentView.h; sourceTree = "<group>"; };
+		784A7F991CD8E1FF00BC011B /* LPSegmentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPSegmentView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,14 +104,9 @@
 		784A7F601CD8DC7200BC011B /* LPSegmentDemo */ = {
 			isa = PBXGroup;
 			children = (
-				784A7F641CD8DC7200BC011B /* AppDelegate.h */,
-				784A7F651CD8DC7200BC011B /* AppDelegate.m */,
-				784A7F671CD8DC7200BC011B /* ViewController.h */,
-				784A7F681CD8DC7200BC011B /* ViewController.m */,
-				784A7F6A1CD8DC7200BC011B /* Main.storyboard */,
-				784A7F6D1CD8DC7200BC011B /* Assets.xcassets */,
-				784A7F6F1CD8DC7200BC011B /* LaunchScreen.storyboard */,
-				784A7F721CD8DC7200BC011B /* Info.plist */,
+				784A7F961CD8DD1500BC011B /* Sections */,
+				784A7F941CD8DCCC00BC011B /* Others */,
+				784A7F951CD8DCD700BC011B /* Resources */,
 				784A7F611CD8DC7200BC011B /* Supporting Files */,
 			);
 			path = LPSegmentDemo;
@@ -138,6 +136,45 @@
 				784A7F881CD8DC7200BC011B /* Info.plist */,
 			);
 			path = LPSegmentDemoUITests;
+			sourceTree = "<group>";
+		};
+		784A7F941CD8DCCC00BC011B /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				784A7F641CD8DC7200BC011B /* AppDelegate.h */,
+				784A7F651CD8DC7200BC011B /* AppDelegate.m */,
+				784A7F671CD8DC7200BC011B /* ViewController.h */,
+				784A7F681CD8DC7200BC011B /* ViewController.m */,
+			);
+			name = Others;
+			sourceTree = "<group>";
+		};
+		784A7F951CD8DCD700BC011B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				784A7F6A1CD8DC7200BC011B /* Main.storyboard */,
+				784A7F6D1CD8DC7200BC011B /* Assets.xcassets */,
+				784A7F6F1CD8DC7200BC011B /* LaunchScreen.storyboard */,
+				784A7F721CD8DC7200BC011B /* Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		784A7F961CD8DD1500BC011B /* Sections */ = {
+			isa = PBXGroup;
+			children = (
+				784A7F971CD8E14B00BC011B /* LPSegmentView */,
+			);
+			path = Sections;
+			sourceTree = "<group>";
+		};
+		784A7F971CD8E14B00BC011B /* LPSegmentView */ = {
+			isa = PBXGroup;
+			children = (
+				784A7F981CD8E1FF00BC011B /* LPSegmentView.h */,
+				784A7F991CD8E1FF00BC011B /* LPSegmentView.m */,
+			);
+			path = LPSegmentView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,6 +307,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				784A7F9A1CD8E1FF00BC011B /* LPSegmentView.m in Sources */,
 				784A7F691CD8DC7200BC011B /* ViewController.m in Sources */,
 				784A7F661CD8DC7200BC011B /* AppDelegate.m in Sources */,
 				784A7F631CD8DC7200BC011B /* main.m in Sources */,
@@ -413,9 +451,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				INFOPLIST_FILE = LPSegmentDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = LP.LPSegmentDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.eizoios.LPSegmentDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -424,9 +464,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				INFOPLIST_FILE = LPSegmentDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = LP.LPSegmentDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.eizoios.LPSegmentDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
