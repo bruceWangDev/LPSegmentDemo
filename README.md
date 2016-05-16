@@ -6,43 +6,23 @@
 
 ![LPMultiSelectDemo展示](https://github.com/EizoiOS/LPSegmentDemo/blob/master/LPSegmentGIF.gif)
 
-1.
-/**
- *  获取当前下标
- *
- *  @param lpSegment lpSegment description
- *  @param index     index description
- */
+1.获取当前下标
  ```	
  - (void)lpSegmentView:(LPSegmentView *)lpSegment selectAtIndex:(NSInteger)index;
  ```
 
-2.
-/**
- *  初始化 LPSegmentView
- *
- *  @param y        LPSegmentView的高度
- *  @param titleArr 标签数组
- *  @param delegate 代理对象
- *
- *  @return LPSegmentView
- */
+2.初始化 - 第一个参数是Y值 第二个是标签数组 第三个是self
  ```
  - (instancetype)initWithOrginY:(CGFloat)y TitleArr:(NSArray *)titleArr delegate:(id)delegate;
  ```
 
-3.
-/**
- *  改变下标的方法
- *
- *  @param index 提供修改的index
- */
+3.改变下标的方法 - changeIndex
  ```
  - (void)changLPSegemntViewWithIndex:(NSInteger)index;
  ```
 
-## 更新日志
-* 2016.05.16 Update Logs (Tag: 1.0.0)
+## Release
+### Version 1.0.0 
 
 ## 联系 Support
 
