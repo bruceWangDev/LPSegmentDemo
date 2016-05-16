@@ -6,7 +6,8 @@
 
 ![LPMultiSelectDemo展示](https://github.com/EizoiOS/LPSegmentDemo/blob/master/LPSegmentGIF.gif)
 
-`/**
+`	
+/**
  *  获取当前下标
  *
  *  @param lpSegment lpSegment description
@@ -30,7 +31,8 @@
  *
  *  @param index 提供修改的index
  */
-- (void)changLPSegemntViewWithIndex:(NSInteger)index;`
+- (void)changLPSegemntViewWithIndex:(NSInteger)index;
+`
 
 ## 更新日志
 * 2016.05.16 Update Logs (Tag: 1.0.0)
