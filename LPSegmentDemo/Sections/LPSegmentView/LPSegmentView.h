@@ -13,7 +13,7 @@
 @protocol LPSegmentViewDelegate <NSObject>
 
 /**
- *  获取当前下标 - 设置分辨率 PS:标清、高清、超清
+ *  获取当前下标
  *
  *  @param lpSegment lpSegment description
  *  @param index     index description

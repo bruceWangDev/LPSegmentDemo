@@ -56,9 +56,10 @@
     
     if (self = [super initWithFrame:selfViewFrame]) {
         
+        // 设置背景颜色
         self.backgroundColor = UIColorFromRGBValue(0xf3f3f3);
         
-        [self setUserInteractionEnabled:YES]; // set
+        [self setUserInteractionEnabled:YES]; // set No edit
         
         self.delegate = delegate;
         
@@ -66,7 +67,7 @@
         
         CGFloat btnWidth = selfViewFrame.size.width/[titleArr count];
         
-        // 按钮的长度最小不小于80 - 设置一个最小长度 没有按照5个标准 有需要自己修改
+        // 按钮的长度最小不小于80 - 设置一个最小长度 没有按照4、5个标准 有需要自己修改
         if (btnWidth < Min_Width_Button) {
             btnWidth = Min_Width_Button;
         }
@@ -80,7 +81,7 @@
 //        scrollView.layer.borderWidth = 0.4f;
 //        scrollView.layer.borderColor = UIColorFromRGBValue(0x999999).CGColor;
         
-        // 创建点击按钮
+        // for循环 创建点击按钮
         for (int i = 0; i < [titleArr count]; i++ ) {
             
             UIButton * btn = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -92,7 +93,7 @@
             btn.titleLabel.font = [UIFont systemFontOfSize:14];
             [btn setTitle:[titleArr objectAtIndex:i] forState:UIControlStateNormal];
             [btn addTarget:self action:@selector(segmentedControlChange:) forControlEvents:UIControlEventTouchUpInside];
-            btn.tag = Define_Tag_add + i;
+            btn.tag = Define_Tag_add + i; // tag
             [scorllView addSubview:btn];
             [_btnsArr addObject:btn];
             
@@ -120,10 +121,13 @@
     return self;
 }
 
+// 每一个按钮点击的方式
 - (void)segmentedControlChange:(UIButton *)btn {
     
+    // 首先 点击的按钮状态为选中
     btn.selected = YES;
     
+    // 其次 在整个按钮数组中 除了点击的这个按钮 其他按钮都未不选中状态
     for (UIButton *subBtn in self.btnsArr) {
         
         if (subBtn != btn) {
@@ -132,6 +136,7 @@
         }
     }
     
+    // 设置frame
     CGRect bottomLine = self.bottomLineView.frame;
     bottomLine.origin.x = btn.frame.origin.x;
     
@@ -180,6 +185,7 @@
         }];
     }
     
+    // 需要执行代理方法
     if (self.delegate && [self.delegate respondsToSelector:@selector(lpSegmentView:selectAtIndex:)]) {
         
         [self.delegate lpSegmentView:self selectAtIndex:btn.tag - 1000];
