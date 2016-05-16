@@ -6,15 +6,18 @@
 
 ![LPMultiSelectDemo展示](https://github.com/EizoiOS/LPSegmentDemo/blob/master/LPSegmentGIF.gif)
 
-`	
+1.
 /**
  *  获取当前下标
  *
  *  @param lpSegment lpSegment description
  *  @param index     index description
  */
-- (void)lpSegmentView:(LPSegmentView *)lpSegment selectAtIndex:(NSInteger)index;
+ ```	
+ - (void)lpSegmentView:(LPSegmentView *)lpSegment selectAtIndex:(NSInteger)index;
+ ```
 
+2.
 /**
  *  初始化 LPSegmentView
  *
@@ -24,15 +27,19 @@
  *
  *  @return LPSegmentView
  */
-- (instancetype)initWithOrginY:(CGFloat)y TitleArr:(NSArray *)titleArr delegate:(id)delegate;
+ ```
+ - (instancetype)initWithOrginY:(CGFloat)y TitleArr:(NSArray *)titleArr delegate:(id)delegate;
+ ```
 
+3.
 /**
  *  改变下标的方法
  *
  *  @param index 提供修改的index
  */
-- (void)changLPSegemntViewWithIndex:(NSInteger)index;
-`
+ ```
+ - (void)changLPSegemntViewWithIndex:(NSInteger)index;
+ ```
 
 ## 更新日志
 * 2016.05.16 Update Logs (Tag: 1.0.0)
