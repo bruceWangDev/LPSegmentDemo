@@ -20,9 +20,12 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gI4-69-Uft">
                                 <rect key="frame" x="0.0" y="567" width="375" height="100"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N6A-1Y-gSH">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N6A-1Y-gSH">
                                         <rect key="frame" x="158" y="20" width="60" height="60"/>
                                         <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="DiS-X0-W8t"/>
+                                        </constraints>
                                         <state key="normal" title="开播">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -33,6 +36,9 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstItem="N6A-1Y-gSH" firstAttribute="centerX" secondItem="gI4-69-Uft" secondAttribute="centerX" id="Irj-Bb-tJ7"/>
+                                    <constraint firstItem="N6A-1Y-gSH" firstAttribute="centerY" secondItem="gI4-69-Uft" secondAttribute="centerY" id="XWB-zi-P9f"/>
+                                    <constraint firstItem="N6A-1Y-gSH" firstAttribute="top" secondItem="gI4-69-Uft" secondAttribute="top" constant="20" id="h2M-PM-KDi"/>
                                     <constraint firstAttribute="height" constant="100" id="se8-BM-fgR"/>
                                 </constraints>
                             </view>
